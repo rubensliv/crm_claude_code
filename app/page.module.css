@@ -1,0 +1,712 @@
+/* Visual desta tela. Regras e cores: design.md */
+
+.pagina {
+  min-height: 100vh;
+  padding: 40px 24px 96px;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 24px;
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borda);
+}
+
+.navMarca {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--texto);
+}
+
+.navLinks {
+  display: flex;
+  gap: 8px;
+}
+
+.navLink {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto-apoio);
+  text-decoration: none;
+  border-radius: var(--raio);
+}
+
+.navLink:hover {
+  color: var(--texto);
+  background-color: var(--fundo);
+}
+
+.navLinkAtivo {
+  color: var(--destaque);
+  background-color: var(--fundo);
+}
+
+.navDireita {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+}
+
+.navUsuario {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto-apoio);
+}
+
+.conteudo {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.titulo {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+}
+
+/* Botão Sair: secundário, contorno na cor de destaque */
+.botaoSair {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--destaque);
+  background-color: var(--superficie);
+  border: 1px solid var(--destaque);
+  border-radius: var(--raio);
+  cursor: pointer;
+}
+
+.botaoSair:hover {
+  color: var(--superficie);
+  background-color: var(--destaque);
+}
+
+.apoio {
+  margin: 12px 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--texto-apoio);
+}
+
+/* Superfície branca com borda sutil, sem sombra */
+.cartao {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 36px 36px 40px;
+}
+
+/* ---------- Painel do funil ---------- */
+
+.painel {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 24px 32px;
+}
+
+.painelItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.painelNumero {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.painelRotulo {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--texto-apoio);
+}
+
+/* Total em grafite; cada etapa na sua cor (cores no design.md) */
+.painelNumeroTotal {
+  color: var(--texto);
+}
+
+.painelNumeroNovo {
+  color: var(--etapa-novo);
+}
+
+.painelNumeroEmContato {
+  color: var(--etapa-em-contato);
+}
+
+.painelNumeroProposta {
+  color: var(--etapa-proposta);
+}
+
+.painelNumeroCliente {
+  color: var(--etapa-cliente);
+}
+
+.subtitulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 28px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--texto);
+}
+
+.contagem {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto-apoio);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 2px 10px;
+}
+
+/* ---------- Formulário ---------- */
+
+.campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.rotulo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.campo {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--texto);
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.campo::placeholder {
+  color: var(--texto-apoio);
+  opacity: 0.7;
+}
+
+.campo:focus {
+  outline: 2px solid var(--destaque);
+  outline-offset: 1px;
+  border-color: var(--destaque);
+}
+
+.rodapeFormulario {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  margin-top: 28px;
+}
+
+.botao {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--superficie);
+  background-color: var(--destaque);
+  border: 1px solid var(--destaque);
+  border-radius: var(--raio);
+  padding: 12px 22px;
+  cursor: pointer;
+}
+
+.botao:hover:not(:disabled) {
+  background-color: var(--destaque-hover);
+  border-color: var(--destaque-hover);
+}
+
+.botao:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.aviso {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--texto-apoio);
+}
+
+.avisoErro {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto);
+  border: 1px solid var(--texto);
+  border-radius: var(--raio);
+  padding: 8px 14px;
+}
+
+/* ---------- Lista ---------- */
+
+.vazio {
+  margin: 0;
+  font-size: 15px;
+  color: var(--texto-apoio);
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  padding: 20px 0;
+  border-top: 1px solid var(--borda);
+}
+
+.item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.itemTopo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nome {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.detalhes {
+  margin: 6px 0 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--texto-apoio);
+}
+
+/* ---------- Follow-up por IA ---------- */
+
+.acoesContato {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* Herda o visual do botão de anotações; só ajusta o estado desabilitado */
+.acoesContato .botaoAnotacoes {
+  margin-top: 0;
+}
+
+.followupEscrevendo {
+  margin: 14px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--texto-apoio);
+}
+
+.followupCartao {
+  margin-top: 14px;
+  padding: 16px;
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.followupTexto {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--texto);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.followupErro {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto);
+  border: 1px solid var(--texto);
+  border-radius: var(--raio);
+}
+
+/* ---------- Anotações ---------- */
+
+/* Botão secundário: contorno na cor de destaque, preenche no hover */
+.botaoAnotacoes {
+  margin-top: 14px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--destaque);
+  background-color: var(--superficie);
+  border: 1px solid var(--destaque);
+  border-radius: var(--raio);
+  cursor: pointer;
+}
+
+.botaoAnotacoes:hover {
+  color: var(--superficie);
+  background-color: var(--destaque);
+}
+
+.painelAnotacoes {
+  margin-top: 16px;
+  padding: 20px;
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.vazioAnotacoes {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--texto-apoio);
+}
+
+.listaAnotacoes {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.anotacao {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 12px 14px;
+}
+
+.dataAnotacao {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--texto-apoio);
+}
+
+.textoAnotacao {
+  margin: 6px 0 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--texto);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.formAnotacao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.campoAnotacao {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--texto);
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  resize: vertical;
+}
+
+.campoAnotacao::placeholder {
+  color: var(--texto-apoio);
+  opacity: 0.7;
+}
+
+.campoAnotacao:focus {
+  outline: 2px solid var(--destaque);
+  outline-offset: 1px;
+  border-color: var(--destaque);
+}
+
+.rodapeAnotacao {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+
+/* Botões dentro de cada anotação (editar / excluir) */
+.acoesAnotacao {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.botaoMini {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--raio);
+  color: var(--texto);
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  cursor: pointer;
+}
+
+.botaoMini:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* Editar: contorno na cor de destaque, preenche no hover */
+.botaoEditar {
+  color: var(--destaque);
+  border-color: var(--destaque);
+}
+
+.botaoEditar:hover:not(:disabled) {
+  color: var(--superficie);
+  background-color: var(--destaque);
+}
+
+/* Copiar (follow-up): roxo, a pedido do usuário */
+.botaoCopiar {
+  color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+.botaoCopiar:hover:not(:disabled) {
+  color: var(--superficie);
+  background-color: #7c3aed;
+}
+
+/* Excluir: neutro. Sem vermelho — a confirmação é que protege (design.md) */
+.botaoExcluir {
+  color: var(--texto-apoio);
+}
+
+.botaoExcluir:hover:not(:disabled) {
+  color: var(--texto);
+  border-color: var(--texto);
+}
+
+/* Confirmar exclusão: grafite forte, chama atenção sem outra cor de marca */
+.botaoConfirmar {
+  color: var(--superficie);
+  background-color: var(--texto);
+  border-color: var(--texto);
+}
+
+.perguntaExclusao {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--texto);
+  margin-right: 4px;
+}
+
+/* ---------- Configurações ---------- */
+
+.rotuloConfig {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.opcoesFundo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.amostraFundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: none;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.amostraFundo:hover {
+  border-color: var(--texto-apoio);
+}
+
+/* Opção ativa: contorno na cor de destaque */
+.amostraAtiva {
+  padding: 9px;
+  border-width: 2px;
+  border-color: var(--destaque);
+}
+
+.amostraCor {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+}
+
+.nomeFundo {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+/* ---------- Etiquetas de usuário (papel e situação) ---------- */
+
+.etiquetasUsuario {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.papelAdmin {
+  color: var(--destaque);
+  background-color: #1d4ed814;
+  border: 1px solid #1d4ed840;
+}
+
+.papelUser {
+  color: var(--texto-apoio);
+  background-color: transparent;
+  border: 1px solid var(--borda);
+}
+
+.statusAprovado {
+  color: #15803d;
+  background-color: #15803d14;
+  border: 1px solid #15803d40;
+}
+
+.statusPendente {
+  color: #d97706;
+  background-color: #d9770614;
+  border: 1px solid #d9770640;
+}
+
+/* ---------- Seletor de etapa (mudar status) ---------- */
+
+.seletorEtapa {
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+  background-color: var(--superficie);
+  cursor: pointer;
+}
+
+.seletorEtapa:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Cada etapa colore o texto e a borda do seletor (cores no design.md) */
+.seletorNovo {
+  color: var(--etapa-novo);
+  border-color: #64748b66;
+}
+
+.seletorEmContato {
+  color: var(--etapa-em-contato);
+  border-color: #d9770666;
+}
+
+.seletorProposta {
+  color: var(--etapa-proposta);
+  border-color: #7c3aed66;
+}
+
+.seletorCliente {
+  color: var(--etapa-cliente);
+  border-color: #15803d66;
+}
+
+/* ---------- Etiquetas de etapa ---------- */
+/* Únicos lugares onde as cores de etapa podem aparecer (design.md) */
+
+.etiqueta {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--raio);
+  padding: 4px 12px;
+  border: 1px solid;
+}
+
+.etapaNovo {
+  color: #64748b;
+  background-color: #64748b14;
+  border-color: #64748b40;
+}
+
+.etapaEmContato {
+  color: #d97706;
+  background-color: #d9770614;
+  border-color: #d9770640;
+}
+
+.etapaProposta {
+  color: #7c3aed;
+  background-color: #7c3aed14;
+  border-color: #7c3aed40;
+}
+
+.etapaCliente {
+  color: #15803d;
+  background-color: #15803d14;
+  border-color: #15803d40;
+}

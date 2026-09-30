@@ -1,0 +1,40 @@
+/* Tokens da identidade visual. Fonte da verdade: design.md */
+:root {
+  /* Base */
+  --fundo: #fafaf7;
+  --superficie: #ffffff;
+  --borda: #e6e4de;
+  --texto: #17181c;
+  --texto-apoio: #6b6e76;
+
+  /* Destaque (única cor de marca) */
+  --destaque: #1d4ed8;
+  --destaque-hover: #1e40af;
+
+  /* Etapas do funil — só para etiquetas de etapa */
+  --etapa-novo: #64748b;
+  --etapa-em-contato: #d97706;
+  --etapa-proposta: #7c3aed;
+  --etapa-cliente: #15803d;
+
+  /* Formas */
+  --raio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}

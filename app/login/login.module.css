@@ -1,0 +1,128 @@
+/* Tela de login. Cores e formas: design.md */
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.cartao {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 40px;
+}
+
+.titulo {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+}
+
+.apoio {
+  margin: 8px 0 32px;
+  font-size: 15px;
+  color: var(--texto-apoio);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rotulo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.campo {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--texto);
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.campo:focus {
+  outline: 2px solid var(--destaque);
+  outline-offset: 1px;
+  border-color: var(--destaque);
+}
+
+.botao {
+  margin-top: 4px;
+  padding: 12px 22px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--superficie);
+  background-color: var(--destaque);
+  border: 1px solid var(--destaque);
+  border-radius: var(--raio);
+  cursor: pointer;
+}
+
+.botao:hover:not(:disabled) {
+  background-color: var(--destaque-hover);
+  border-color: var(--destaque-hover);
+}
+
+.botao:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* Sem vermelho (design.md): borda grafite forte marca o erro */
+.erro {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--texto);
+  border: 1px solid var(--texto);
+  border-radius: var(--raio);
+}
+
+/* Mensagem de sucesso (ex.: cadastro enviado) */
+.aviso {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--texto);
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+/* Link para trocar entre login e cadastro */
+.rodapeLink {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--texto-apoio);
+  text-align: center;
+}
+
+.rodapeLink a {
+  font-weight: 700;
+  color: var(--destaque);
+  text-decoration: none;
+}
+
+.rodapeLink a:hover {
+  text-decoration: underline;
+}
